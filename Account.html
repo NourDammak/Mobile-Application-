@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log/Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+    
+
+            
+
+
+
+
+        <!------------account-page--------------------->
+     <div class="account-page">
+           <div class="selection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                      <video loop autoplay muted controls id="vid">
+                            <source src="Never Miss a Package with Amazon Locker.mp4" type="video/mp4">
+                        </video>
+                       </div>
+                    
+                    <div class="col-2">   
+                        <div class="form-container">
+                            <div class="form-btn">
+                                <h2><u>New account</u></h3>
+                             <span onclick="login()">Login</span>
+                             <span onclick="register()">Register</span>
+                             <hr id="Indicator">
+                            </div>
+                            <form id="LoginForm">
+                                    <input type="text" placeholder="Username">
+                                    <input type="password" placeholder="Password">
+                                    <button type="submit" class="btn"><a href="home.html"> Login</a></button>
+                                    <a href="">Forgot Password</a>
+                            </form>
+                            
+                            <form id="RegForm">
+                                    <input type="Email" placeholder="E-mail">
+                                    <input type="Email" placeholder="Phone number">
+                                    <input type="text" placeholder="First Name">
+                                    <input type="text" placeholder="Last Name">
+                                    <input type="password" placeholder="Password">
+                                    <button type="submit" class="btn"><a href="">Register</a></button>
+                                    <a href="">You already have an account?   Login </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+            
+            function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform ="translateX(0px)";
+                Indicator.style.transform ="translateX(100px)";
+            }
+            function login(){
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform ="translateX(300px)";
+                Indicator.style.transform ="translateX(0px)";
+            }
+        </script>
+        <script>
+            document.getElementById('vid').play();
+        </script>
+    </body>
+</html>
